@@ -1,0 +1,9 @@
+build/*
+doc/*
+external/*
+lib/*
+*.pro.user
+*.pro.user.*
+*.exe
+*.dll
+*~

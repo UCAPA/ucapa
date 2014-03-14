@@ -1,0 +1,34 @@
+To compile this Application Programming Interface you will need to use ASIO and FFMPEG.
+
+You can find latest version of ASIO here :
+	http://think-async.com/Asio/Download
+And the latest version of FFMPEG here :
+	http://ffmpeg.org/download.html
+
+Recommended versions :
+	- ASIO 1.10.1 (use the standalone non-boost version)
+	- FFMPEG 32 bit 
+	
+Then create a folder name "external" at the root of your API folder.
+In external : 
+	extract ASIO and rename it "asio".
+	extract FFMPEG and rename it "FFmpeg".
+
+After this, you should have this directory structure :
+
+<UCAPA>/
+	-> examples/
+		-> ...
+	-> external/
+		-> asio/
+			-> some folders and files
+		-> FFmpeg/
+			-> some folders and files
+	-> include/
+		-> ...
+	-> src/
+		-> ...
+
+To build the API with QtCreator using the existing project, we recommend to 
+choose <UCAPA>/build as build directory.
+Note that the API is independant of Qt, only example applications require it.
