@@ -6,8 +6,8 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    a.setApplicationName("UCAPA");
-    a.setApplicationVersion("0.6.0");
+    a.setApplicationName("Navigator");
+    a.setApplicationVersion("1.0");
 
     QPixmap pixmap("ressources/splash.png");
     QSplashScreen splash(pixmap);

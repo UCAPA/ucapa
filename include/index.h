@@ -32,7 +32,7 @@
  * @tableofcontents
  *
  *
- * <center>Documentation for UCAPA 0.9<br>
+ * <center>Documentation for UCAPA 1.0<br>
  * UCAPA means @c "Unofficial C++ API for Parrot ARDrone 2.0".<br>
  * It is a cross-platform API for the Parrot ARDrone 2.0.<br>
  * For developers, UCAPA is available under MIT licence.<br></center>
