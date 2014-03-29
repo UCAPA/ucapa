@@ -2,8 +2,15 @@ build/*
 doc/*
 external/*
 lib/*
+
 *.pro.user
 *.pro.user.*
 *.exe
+*.ilk
+*.pdb
 *.dll
 *~
+
+CMakeLists.txt.user
+examples/navigator/[Nn]avigator
+examples/derivate/[Dd]erivate
