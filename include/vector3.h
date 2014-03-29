@@ -27,13 +27,15 @@
 
 #include <cmath>
 
+#include <config.h>
+
 namespace ucapa{
     /**
      * @brief A Vector3 class
      *
      * Allow to store triplet of value and allow to do some maths operations like dot and cross product, etc...
      */
-    class Vector3
+    class UCAPA_API Vector3
     {
     public:
         const static Vector3 zero;     ///< Vector3(0, 0, 0)

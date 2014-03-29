@@ -54,7 +54,7 @@ namespace ucapa{
      * Note that this reference is different of the reference directly
      * used by the ARDrone in AT commands or in the navdata.
      */
-    class ARDrone
+    class UCAPA_API ARDrone
     {
     public:
         // Flight animation IDs

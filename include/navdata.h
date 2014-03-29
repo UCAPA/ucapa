@@ -42,7 +42,7 @@ namespace ucapa{
      *
      * Allow to access many informations of ARDrone flight.
      */
-    class Navdata
+    class UCAPA_API Navdata
     {
     public:
         // Navdata Mask

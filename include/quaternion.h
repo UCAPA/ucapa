@@ -35,7 +35,7 @@ namespace ucapa{
     /**
      * @brief A Quaternion class allow to do some 3D rotations
      */
-    class Quaternion
+    class UCAPA_API Quaternion
     {
     public:
         float x; // Vectorial imaginary part

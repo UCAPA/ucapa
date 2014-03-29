@@ -34,6 +34,7 @@
 
 #include <asio.hpp>
 
+#include <config.h>
 #include <navdata.h>
 #include <video.h>
 
@@ -52,7 +53,7 @@ namespace ucapa{
      * - the last, on TCP port 5559, is to transfer critical data. It used to retrieve configuration data, and to acknowledge important
      *     information such as the sending of configuration information.
      */
-    class ARDroneConnections
+    class UCAPA_API ARDroneConnections
     {
     protected:
         asio::io_service m_ioService; ///< Network service

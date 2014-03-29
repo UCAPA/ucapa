@@ -38,6 +38,8 @@ extern "C" {
     #include <libswscale/swscale.h>
 }
 
+#include <config.h>
+
 class ARDrone;
 
 namespace ucapa{
@@ -46,7 +48,7 @@ namespace ucapa{
      *
      * Receive video stream from the drone.
      */
-    class Video
+    class UCAPA_API Video
     {
     protected:
         const std::string m_droneIP; ///< Drone IP.
