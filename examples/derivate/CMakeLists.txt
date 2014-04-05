@@ -23,6 +23,6 @@ if(WIN32)
 	target_link_libraries(${PROJECT_NAME} ws2_32 wsock32)
 	target_link_libraries(${PROJECT_NAME} ${FFMPEG_LIB_DIR})
 elseif(UNIX)
-	target_link_libraries(${PROJECT_NAME} pthread ${FFMPEG_LIB_DIR} va z)
+	target_link_libraries(${PROJECT_NAME} pthread ${FFMPEG_LIB_DIR} va z bz2)
 endif(WIN32)
 
