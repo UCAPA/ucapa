@@ -35,7 +35,7 @@ namespace ucapa{
     /**
      * @brief The Matrix class provide the use of template matrix
      */
-    class UCAPA_API Matrix
+    class Matrix // Don't use UCAPA_API for a template class
     {
     protected:
         int m_nRow; ///< Number of lines

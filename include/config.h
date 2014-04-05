@@ -28,7 +28,7 @@
 #if defined(SHARED_BUILD)
     #if defined(_WIN32) || defined(WIN32)
         // Windows compilers need specific (and different) keywords for export and import
-        #ifndef ucapa_IMPORTS
+        #ifdef ucapa_EXPORTS
             #define UCAPA_API __declspec(dllexport)
         #else
             #define UCAPA_API __declspec(dllimport)
