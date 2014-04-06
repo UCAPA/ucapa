@@ -5,7 +5,6 @@
 int main(/*int argc, char *argv[]*/)
 {
     ExtARDrone drone("994512fe", "ab55654ef", "c54456e23");
-    //ExtARDrone drone("d2e081a3", "be27e2e4", "d87f7e0c");
 
     for (int i = 0; i < 40; ++i)
     {
