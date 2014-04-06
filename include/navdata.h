@@ -131,7 +131,7 @@ namespace ucapa{
         mutable std::mutex m_mutex;
         std::atomic<bool> m_computeWorldData; ///< Enable or Disable the world data computation
         std::atomic<bool> m_needToResetRotation; ///< Permit to know if the rotation needs to be reset
-        std::chrono::duration<double> m_navdataDeltaTime; ///< Permit to know the time between two reception
+        std::chrono::duration<float> m_navdataDeltaTime; ///< Permit to know the time between two reception
         std::atomic<int> m_state;  ///< Number containing the drone's states
         std::atomic<int> m_sequenceNumber; ///< Sequence number of command send by the drone
         std::atomic<int> m_vision; ///< Number containing informations on Augmented reality data stream

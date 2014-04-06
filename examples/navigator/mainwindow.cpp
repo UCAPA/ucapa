@@ -107,28 +107,28 @@ void MainWindow::timerEvent( QTimerEvent * evt )
         {
             switch (key) {
                 case Qt::Key_Z: //forward
-                    move.z = 0.25;
+                    move.z = 0.25f;
                     break;
                 case Qt::Key_S: //backward
-                    move.z = -0.25;
+                    move.z = -0.25f;
                     break;
                 case Qt::Key_D: //right
-                    move.x = 0.25;
+                    move.x = 0.25f;
                     break;
                 case Qt::Key_Q: //left
-                    move.x = -0.25;
+                    move.x = -0.25f;
                     break;
                 case Qt::Key_Shift: //up
-                    move.y = 0.5;
+                    move.y = 0.5f;
                     break;
                 case Qt::Key_Control: //down
-                    move.y = -0.5;
+                    move.y = -0.5f;
                     break;
                 case Qt::Key_E: //Tr
-                    ry = 0.6;
+                    ry = 0.6f;
                     break;
                 case Qt::Key_A: //Tl
-                    ry = -0.6;
+                    ry = -0.6f;
                     break;
             }
         }
@@ -249,13 +249,13 @@ void MainWindow::right()
 void MainWindow::turnLeft()
 {
     cout << "turnLeft" << endl;
-    m_drone.move({0, 0, 0}, -0.6);
+    m_drone.move({0, 0, 0}, -0.6f);
 }
 
 void MainWindow::turnRight()
 {
     cout << "turnRight" << endl;
-    m_drone.move({0, 0, 0}, 0.6);
+    m_drone.move({0, 0, 0}, 0.6f);
 }
 
 void MainWindow::up()

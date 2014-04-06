@@ -29,7 +29,7 @@
 
 #include <config.h>
 
-const float PI = 3.1415926535897932384626433832795;
+const float PI = 3.1415926535897932384626433832795f;
 
 /**
  * @brief Compute the truncate floor value of number value.
@@ -37,15 +37,15 @@ const float PI = 3.1415926535897932384626433832795;
  * @param nbDecimal Number of decimal you want to keep.
  * @return The truncate floor value.
  */
-template <typename T> inline UCAPA_API T floorValue(const T& value, int nbDecimal);
+template <typename T> inline T floorValue(const T& value, int nbDecimal);
 /// @brief Conversion from millimeters to meters.
-template <typename T> inline UCAPA_API T mmToM(T mm);
+template <typename T> inline T mmToM(T mm);
 /// @brief Conversion from meters to millimeters.
-template <typename T> inline UCAPA_API T mToMm(T m);
+template <typename T> inline T mToMm(T m);
 /// @brief Conversion from degrees to radians.
-template <typename T> inline UCAPA_API T degToRad(T deg);
+template <typename T> inline T degToRad(T deg);
 /// @brief Conversion from radians to degrees.
-template <typename T> inline UCAPA_API T radToDeg(T rad);
+template <typename T> inline T radToDeg(T rad);
 
 template <typename T>
 inline T floorValue(const T& value, int nbDecimal)

@@ -87,7 +87,7 @@ namespace ucapa{
     Quaternion Quaternion::normalized() const
     {
         float n = x*x + y*y + z*z + w*w;
-        n = 1.0 / sqrt(n);
+        n = 1.0f / sqrt(n);
         return (*this * n);
     }
 
@@ -174,7 +174,7 @@ namespace ucapa{
 
     float Quaternion::getAngle() const
     {
-        return 2.0*acos(w)*(180/PI);
+        return 2.0f*acos(w)*(180/PI);
     }
 
     Vector3 Quaternion::getVectorAxis() const

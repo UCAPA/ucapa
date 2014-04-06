@@ -58,7 +58,7 @@ namespace ucapa{
         m_rotation.x = *(++f);
         m_rotation.x = -m_rotation.x;
 
-        m_rotation /= 1000.0;
+        m_rotation /= 1000.0f;
 
         if (m_needToResetRotation) {
             if (std::abs(m_rotation.x - oldRot.x) > 3) {
@@ -70,7 +70,7 @@ namespace ucapa{
         // Retrieve the altitude
         i = (int*)f;
         float previousAltitude = m_altitude;
-        m_altitude = (*(++i))/1000.0;
+        m_altitude = (*(++i))/1000.0f;
 
         // Retrieve the velocity
         f = (float*)i;
@@ -78,7 +78,7 @@ namespace ucapa{
         m_localVelocity.z = *(++f);
         m_localVelocity.x = *(++f);
         m_localVelocity.y = *(++f);
-        m_localVelocity /= 1000.0;
+        m_localVelocity /= 1000.0f;
         if (m_localVelocity.y == 0) {// If it is a buggy version of the drone firmware
             m_localVelocity.y = (m_altitude - previousAltitude)/m_navdataDeltaTime.count();
         }
@@ -88,7 +88,7 @@ namespace ucapa{
             // Calculate world velocity
             Vector3 rot = m_rotation;
             rot.x = rot.x - m_startingRotation.x;
-            rot = rot*(PI/180.0);
+            rot = rot*(PI/180.0f);
             Quaternion q(rot.z, rot.x, rot.y);
             Matrix<float> T(q.getMatrix());
             Matrix<float> tT(T.transponate());
@@ -188,7 +188,7 @@ namespace ucapa{
 
     Vector3 Navdata::getRotationInRad() const
     {
-        return getRotation()*(PI/180.0);
+        return getRotation()*(PI/180.0f);
     }
 
     Vector3 Navdata::getLocalVelocity() const
