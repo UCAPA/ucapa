@@ -19,13 +19,13 @@ DEFINES += ASIO_STANDALONE
 INCLUDEPATH +=  \
                 ../../include \
                 ../../external/asio/include/ \
-                ../../external/FFmpeg/include/
+                ../../external/ffmpeg/include/
 
 LIBS += -L"$$_PRO_FILE_PWD_/../../lib/" -lucapa
 
 win32 {
     LIBS += -lws2_32 -lmswsock
-    LIBS += -L"$$_PRO_FILE_PWD_/../../external/FFmpeg/lib/" -lavformat -lavcodec -lswscale -lavutil
+    LIBS += -L"$$_PRO_FILE_PWD_/../../external/ffmpeg/lib/" -lavformat -lavcodec -lswscale -lavutil
 }
 unix {
     LIBS += -I/usr/local/include  -pthread

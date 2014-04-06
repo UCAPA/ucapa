@@ -1,7 +1,3 @@
-#ifndef INDEX_H
-#define INDEX_H
-
-
 /******************************************************************************
  * The MIT License (MIT)
  *
@@ -25,7 +21,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  *****************************************************************************/
+#ifndef INDEX_H
+#define INDEX_H
 
+ 
 /*!
  * @mainpage
  *
@@ -45,29 +44,30 @@
  * @subsection compileAPI Compiling the API
  *
  * The API is developped using C++11, so you need to compile it with a compliant
- * compiler. For example, we have used MinGW/GCC 4.8. More generally, you should
- * be able to use GCC >= 4.8, Clang >= 3.3 and VS >= 2012?. Note: In the case of
- * GCC and Clang, at least, you need to toggle an option to enable the C++11 support
- * (normally @c -c++11)<br>
+ * compiler. For example, we have used MinGW/GCC 4.8. More generally, you will
+ * be able to use GCC >= 4.8, Clang >= 3.3 and VS >= 2013 (older compilers might
+ * work but are not officially supported). Note: In the case of GCC and Clang,
+ * you need to toggle an option to enable the C++11 support (normally
+ * @c -c++11)<br>
  * Required dependencies are ASIO, in its standalone version (not Boost version),
  * and FFMPEG.<br>
- * You can configure a project to build UCAPA using your favorite IDE. To do this,
- * our configuration, available into .pro files (for QtCreator), will help you.
- * (Pro files have a quite simple syntax).
+ * You can configure a project to build UCAPA using your favorite IDE. It can be
+ * generated using cmake (>= 2.8.9). You will find more information about how
+ * to compile in the @c COMPILE file in the root directory of the project.
  *
  *
  * @subsection startCoding Start coding
  *
- * To test if everything is working fine, you can compile and run examples available
- * in the examples/ subdirectory of UCAPA.<br>
+ * To test if everything is working fine, you can compile and run examples 
+ * available in the examples/ subdirectory of UCAPA.<br>
  * Then you can start coding your own app. For this, the ARDrone class is the main
- * class to act on the drone. Others classes are only used, directly or indirectly, by
- * this class. So you just need to create an ARDrone object and use it to do many
- * awesome things with the drone.<br>
- * However, for your app, if you want to add a really specific behaviour not already
- * handled by the API, you have to know that you can derivate any of the 4
- * drone-specific classes to extend them. One of the examples will show you how to do this.
- *
+ * class to act on the drone. Others classes are only used, directly or indirectly, 
+ * by this class. So you just need to create an ARDrone object and use it to do 
+ * many awesome things with the drone.<br>
+ * However, for your app, if you want to add a really specific behaviour not
+ * already handled by the API, you have to know that you can derivate any of the 4
+ * drone-specific classes to extend them. One of the examples will show you how to
+ * do this.
  *
  */
 

@@ -23,10 +23,10 @@ DEFINES += ASIO_STANDALONE
 # As our dependencies are not too big, we put them into an external/ subdirectory.
 INCLUDEPATH +=  ./include \
                 ./external/asio/include/ \
-                ./external/FFmpeg/include/
+                ./external/ffmpeg/include/
 win32 {
     LIBS += -lws2_32 -lmswsock
-    LIBS += -L"$$_PRO_FILE_PWD_/external/FFmpeg/lib/" -lavformat -lavcodec -lswscale -lavutil
+    LIBS += -L"$$_PRO_FILE_PWD_/external/ffmpeg/lib/" -lavformat -lavcodec -lswscale -lavutil
 }
 unix {
     LIBS += -L/usr/local/lib -lavformat -lavcodec -lva -lz -lswscale -lavutil

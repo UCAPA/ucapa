@@ -7,12 +7,12 @@ And the latest version of FFMPEG here :
 
 Recommended versions :
 	- ASIO 1.10.1 (use the standalone non-boost version)
-	- FFMPEG 32 bit 
+	- FFMPEG 2.2
 	
 Then create a folder name "external" at the root of your API folder.
-In external : 
-	extract ASIO and rename it "asio".
-	extract FFMPEG and rename it "FFmpeg".
+In this external directory : 
+	- extract ASIO and rename it "asio".
+	- extract FFMPEG and rename it "ffmpeg".
 
 After this, you should have this directory structure :
 
@@ -22,13 +22,24 @@ After this, you should have this directory structure :
 	-> external/
 		-> asio/
 			-> some folders and files
-		-> FFmpeg/
+		-> ffmpeg/
 			-> some folders and files
 	-> include/
 		-> ...
 	-> src/
 		-> ...
 
-To build the API with QtCreator using the existing project, we recommend to 
-choose <UCAPA>/build as build directory.
-Note that the API is independant of Qt, only example applications require it.
+To build the API, you have to generate the project for your IDE using CMake.  
+For this, cmake >= 2.8.9 is required.
+When you configure the project, you can choose between a shared build or a
+static build of the API by switching the BUILD_SHARED_LIBS option. It is also
+highly likely that Qt5 will not be found. Qt is not required to build the API,
+however, the Navigator example needs it, so if you want to build it too, you
+will need to specify the path of your Qt5 directory. For Qt5Widgets_DIR, you
+will need to set the following subdirectory of Qt:
+<QtDIR>/lib/cmake/Qt5Widgets
+Then, you just have to build everything using your favorite IDE.
+
+An alternative but deprecated way to build the API is to use QtCreator and
+the existing projects. If you really want choose this option, you should 
+choose <UCAPA>/build as build directory to avoid some annoying issues.
